@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEO y Google | Posicionamiento Web y Reputación Digital en México</title>
+<meta name="description" content="Especialistas en SEO, reputación digital y posicionamiento en Google. Llevamos tu negocio a los primeros resultados de búsqueda con estrategias probadas y medibles.">
+<meta name="keywords" content="SEO México, posicionamiento web, reputación digital, marketing digital, Google, linkbuilding, agencia SEO">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Marketing con SEO | Posicionamiento y Reputación Digital">
+<meta property="og:description" content="Domina Google con estrategias de SEO y reputación digital que generan resultados reales.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.marketingconseo.com">
+<meta property="og:locale" content="es_MX">
+<link rel="canonical" href="https://www.marketingconseo.com">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="favicon.png">
+
+<style>
+:root {
+  --negro: #0a0a0a;
+  --negro2: #111111;
+  --negro3: #1a1a1a;
+  --amarillo: #F5D000;
+  --amarillo2: #FFE44D;
+  --blanco: #ffffff;
+  --gris: #f4f4f4;
+  --texto-mid: #888888;
+}
+
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Barlow', sans-serif;
+  background: var(--negro);
+  color: var(--blanco);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── NAVBAR ─── */
+nav {
+  position: fixed; top:0; width:100%; z-index:1000;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 5%;
+  height: 68px;
+  background: rgba(10,10,10,0.95);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(245,208,0,0.15);
+}
+
+.logo {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 1.35rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--blanco);
+}
+.logo span { color: var(--amarillo); }
+
+.nav-tel {
+  display: flex; align-items: center; gap: 0.5rem;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-tel:hover { color: var(--amarillo); }
+.nav-tel svg { width:14px; height:14px; fill: var(--amarillo); }
+
+.nav-links {
+  display: flex; gap: 2rem; list-style: none;
+}
+.nav-links a {
+  color: rgba(255,255,255,0.55);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--amarillo); }
+
+.nav-cta {
+  background: var(--amarillo) !important;
+  color: var(--negro) !important;
+  padding: 0.5rem 1.4rem !important;
+  font-weight: 700 !important;
+  border-radius: 3px;
+}
+.nav-cta:hover { background: var(--amarillo2) !important; }
+
+/* ─── HERO ─── */
+.hero {
+  min-height: 100vh;
+  display: flex; flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 5% 60px;
+  position: relative;
+  overflow: hidden;
+  background: var(--negro2);
+}
+
+.hero-bg {
+  position: absolute; inset: 0;
+  background: 
+    radial-gradient(ellipse 80% 60% at 50% 100%, rgba(245,208,0,0.06) 0%, transparent 65%),
+    linear-gradient(180deg, rgba(10,10,10,0) 0%, rgba(10,10,10,0.7) 60%, rgba(10,10,10,1) 100%);
+  z-index: 1;
+}
+
+/* Decorative big letter */
+.hero-deco {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: clamp(300px, 45vw, 600px);
+  color: rgba(245,208,0,0.03);
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+  letter-spacing: -0.05em;
+  z-index: 0;
+}
+
+/* Stars top bar */
+.hero-stars-bar {
+  position: relative; z-index: 2;
+  display: flex; justify-content: center; gap: clamp(2rem, 5vw, 6rem);
+  padding: 100px 0 3rem;
+  flex-wrap: wrap;
+}
+
+.star-item {
+  text-align: center;
+  animation: fadeUp 0.6s ease both;
+}
+.star-item:nth-child(1) { animation-delay: 0.1s; }
+.star-item:nth-child(2) { animation-delay: 0.2s; }
+.star-item:nth-child(3) { animation-delay: 0.3s; }
+
+.stars {
+  display: flex; gap: 3px; justify-content: center;
+  margin-bottom: 0.4rem;
+}
+.stars svg { width:18px; height:18px; fill: var(--amarillo); }
+
+.star-quote {
+  font-style: italic;
+  font-size: clamp(0.78rem, 1.5vw, 0.9rem);
+  color: rgba(255,255,255,0.55);
+}
+
+/* HERO HEADLINE — the big bold text */
+.hero-headline {
+  position: relative; z-index: 2;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.hero-headline h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: clamp(4.5rem, 14vw, 14rem);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--blanco);
+  margin-bottom: 0;
+}
+
+.hero-headline h1 .yellow { color: var(--amarillo); }
+.hero-headline h1 .outline {
+  -webkit-text-stroke: 2px rgba(255,255,255,0.8);
+  color: transparent;
+}
+
+.hero-sub {
+  position: relative; z-index: 2;
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 3rem;
+}
+.hero-sub p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: rgba(255,255,255,0.6);
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+.hero-btns {
+  position: relative; z-index: 2;
+  display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+}
+
+.btn-main {
+  background: var(--amarillo);
+  color: var(--negro);
+  padding: 1rem 2.5rem;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: all 0.2s;
+  display: inline-flex; align-items: center; gap: 0.6rem;
+}
+.btn-main:hover {
+  background: var(--amarillo2);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(245,208,0,0.3);
+}
+
+.btn-ghost {
+  border: 2px solid rgba(255,255,255,0.25);
+  color: rgba(255,255,255,0.7);
+  padding: 1rem 2rem;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: all 0.2s;
+}
+.btn-ghost:hover {
+  border-color: var(--amarillo);
+  color: var(--amarillo);
+}
+
+/* ─── TICKER ─── */
+.ticker-wrap {
+  background: var(--amarillo);
+  padding: 0.8rem 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker-inner {
+  display: inline-flex;
+  animation: ticker 25s linear infinite;
+}
+
+.ticker-inner span {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--negro);
+  padding: 0 2rem;
+}
+
+.ticker-inner span::after {
+  content: '★';
+  margin-left: 2rem;
+  color: rgba(0,0,0,0.35);
+}
+
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ─── SECCIONES BASE ─── */
+.sec { padding: 100px 5%; }
+.sec-inner { max-width: 1180px; margin: 0 auto; }
+
+.sec-tag {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--amarillo);
+  margin-bottom: 1rem;
+  display: flex; align-items: center; gap: 0.6rem;
+}
+.sec-tag::before {
+  content: '';
+  display: block;
+  width: 28px; height: 2px;
+  background: var(--amarillo);
+}
+
+.sec-h {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: clamp(3rem, 6vw, 6rem);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+}
+
+.sec-h em {
+  font-style: italic;
+  color: var(--amarillo);
+}
+
+.sec-p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.5);
+  max-width: 560px;
+  margin-bottom: 4rem;
+  font-weight: 400;
+}
+
+/* ─── SERVICIOS ─── */
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.s-card {
+  background: var(--negro2);
+  padding: 2.5rem 2rem;
+  transition: background 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.s-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--amarillo);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+
+.s-card:hover { background: var(--negro3); }
+.s-card:hover::after { transform: scaleX(1); }
+
+.s-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 4rem;
+  color: rgba(245,208,0,0.1);
+  line-height: 1;
+  margin-bottom: 1rem;
+  transition: color 0.3s;
+}
+.s-card:hover .s-num { color: rgba(245,208,0,0.25); }
+
+.s-card h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.7rem;
+  color: var(--blanco);
+}
+
+.s-card p {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.45);
+}
+
+/* ─── NÚMEROS / STATS ─── */
+.stats-sec {
+  background: var(--amarillo);
+  padding: 80px 5%;
+}
+
+.stats-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.stat-card { text-align: center; }
+
+.stat-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: clamp(3.5rem, 6vw, 5.5rem);
+  color: var(--negro);
+  line-height: 1;
+  display: block;
+}
+
+.stat-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: rgba(0,0,0,0.55);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 0.3rem;
+}
+
+/* ─── PROCESO ─── */
+.proceso-sec { background: var(--negro2); }
+
+.proceso-steps {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.paso {
+  background: var(--negro2);
+  padding: 3rem 2.5rem;
+  display: flex; gap: 2rem; align-items: flex-start;
+  transition: background 0.3s;
+}
+
+.paso:hover { background: #161616; }
+
+.paso-num-big {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 5rem;
+  color: var(--amarillo);
+  line-height: 1;
+  flex-shrink: 0;
+  opacity: 0.8;
+}
+
+.paso-content h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.7rem;
+  padding-top: 0.8rem;
+}
+
+.paso-content p {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.7;
+}
+
+/* ─── RESEÑAS ─── */
+.resenas-sec { background: var(--negro); }
+
+.resenas-header {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  margin-bottom: 3rem;
+  flex-wrap: wrap; gap: 1.5rem;
+}
+
+.resenas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.r-card {
+  background: var(--negro2);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 4px;
+  padding: 2.5rem;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.r-card:hover {
+  border-color: rgba(245,208,0,0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.r-card::before {
+  content: '"';
+  position: absolute;
+  top: 1.5rem; right: 2rem;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 5rem;
+  color: rgba(245,208,0,0.1);
+  font-weight: 900;
+  line-height: 1;
+}
+
+.r-stars {
+  display: flex; gap: 3px; margin-bottom: 1.5rem;
+}
+.r-stars svg { width:16px; height:16px; fill: var(--amarillo); }
+
+.r-text {
+  font-size: 1.05rem;
+  font-style: italic;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 2rem;
+}
+
+.r-author {
+  display: flex; gap: 1rem; align-items: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.r-avatar {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--amarillo);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 1rem;
+  color: var(--negro);
+  flex-shrink: 0;
+}
+
+.r-name { font-weight: 700; font-size: 0.9rem; }
+.r-biz { font-size: 0.8rem; color: rgba(255,255,255,0.4); margin-top: 0.15rem; }
+
+/* ─── BLOG ─── */
+.blog-sec { background: var(--negro2); }
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.b-card {
+  background: var(--negro);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: all 0.3s;
+  display: flex; flex-direction: column;
+}
+
+.b-card:hover {
+  border-color: rgba(245,208,0,0.25);
+  transform: translateY(-3px);
+}
+
+.b-img {
+  height: 200px;
+  background: var(--negro3);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.b-card.big .b-img { height: 260px; }
+
+.b-img-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(10,10,10,0.8));
+}
+
+.b-cat {
+  position: absolute; bottom: 14px; left: 16px; z-index: 1;
+  background: var(--amarillo);
+  color: var(--negro);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.7rem;
+  border-radius: 2px;
+}
+
+.b-body {
+  padding: 1.8rem;
+  flex: 1;
+  display: flex; flex-direction: column;
+}
+
+.b-date {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.3);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.7rem;
+}
+
+.b-body h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.15;
+  color: var(--blanco);
+  margin-bottom: 0.8rem;
+  flex: 1;
+}
+
+.b-body p {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.4);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.b-link {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--amarillo);
+  text-decoration: none;
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  transition: gap 0.2s;
+}
+.b-link:hover { gap: 0.9rem; }
+
+/* ─── CTA ─── */
+.cta-sec {
+  padding: 120px 5%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: var(--negro);
+}
+
+.cta-sec::before {
+  content: 'SEO';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: clamp(200px, 35vw, 450px);
+  color: rgba(245,208,0,0.03);
+  pointer-events: none;
+  user-select: none;
+  line-height: 1;
+}
+
+.cta-sec .sec-tag { justify-content: center; }
+
+.cta-sec .sec-h {
+  font-size: clamp(3.5rem, 9vw, 9rem);
+  margin-bottom: 1.5rem;
+}
+
+.cta-sec .sec-p { margin: 0 auto 3rem; max-width: 560px; }
+
+.cta-btns {
+  display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+}
+
+.btn-wa {
+  background: #25D366;
+  color: #fff;
+  padding: 1rem 2.5rem;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 3px;
+  display: inline-flex; align-items: center; gap: 0.7rem;
+  transition: all 0.2s;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.25);
+}
+.btn-wa:hover {
+  background: #1ebe5d;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(37,211,102,0.4);
+}
+
+/* ─── WA FLOAT ─── */
+.wa-float {
+  position: fixed;
+  bottom: 28px; right: 28px;
+  z-index: 9998;
+  width: 58px; height: 58px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.45);
+  text-decoration: none;
+  transition: all 0.3s;
+  animation: waPulse 2.5s ease-in-out infinite;
+}
+.wa-float:hover { transform: scale(1.12); }
+.wa-float svg { width:30px; height:30px; fill:white; }
+
+.wa-tip {
+  position: absolute;
+  right: 68px;
+  background: var(--negro);
+  color: rgba(255,255,255,0.8);
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.wa-float:hover .wa-tip { opacity: 1; }
+
+/* ─── FOOTER ─── */
+footer {
+  background: var(--negro2);
+  padding: 70px 5% 30px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr 1fr 1fr;
+  gap: 4rem;
+  max-width: 1180px;
+  margin: 0 auto 50px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.f-logo {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--blanco);
+  display: block;
+  margin-bottom: 1rem;
+}
+.f-logo span { color: var(--amarillo); }
+
+footer p {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.8;
+  max-width: 280px;
+  margin-bottom: 1.5rem;
+}
+
+footer h4 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--amarillo);
+  margin-bottom: 1.5rem;
+}
+
+footer ul { list-style: none; }
+footer ul li { margin-bottom: 0.65rem; }
+footer ul a {
+  color: rgba(255,255,255,0.38);
+  text-decoration: none;
+  font-size: 0.87rem;
+  transition: color 0.2s;
+}
+footer ul a:hover { color: var(--amarillo); }
+
+.footer-bottom {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.2);
+  flex-wrap: wrap; gap: 0.5rem;
+}
+
+/* ─── HAMBURGUER (mobile) ─── */
+.hamburger {
+  display: none;
+  flex-direction: column; gap: 5px;
+  cursor: pointer; padding: 5px;
+  background: none; border: none;
+}
+.hamburger span {
+  display: block; width: 24px; height: 2px;
+  background: var(--blanco); border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed; inset: 0;
+  background: var(--negro);
+  z-index: 999;
+  flex-direction: column; justify-content: center; align-items: center;
+  gap: 2.5rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.mobile-menu.open { opacity: 1; }
+.mobile-menu a {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: var(--blanco);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.mobile-menu a:hover { color: var(--amarillo); }
+.mobile-menu-close {
+  position: absolute; top: 24px; right: 5%;
+  background: none; border: none;
+  color: var(--blanco); font-size: 2rem; cursor: pointer;
+}
+
+/* ─── ANIMATIONS ─── */
+@keyframes fadeUp {
+  from { opacity:0; transform: translateY(20px); }
+  to { opacity:1; transform: translateY(0); }
+}
+
+@keyframes waPulse {
+  0%,100% { box-shadow: 0 4px 20px rgba(37,211,102,0.45); }
+  50% { box-shadow: 0 4px 30px rgba(37,211,102,0.7), 0 0 0 10px rgba(37,211,102,0.08); }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.in { opacity:1; transform:none; }
+.reveal-d1 { transition-delay: 0.1s; }
+.reveal-d2 { transition-delay: 0.2s; }
+.reveal-d3 { transition-delay: 0.3s; }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 1024px) {
+  .servicios-grid { grid-template-columns: repeat(2, 1fr); }
+  .stats-inner { grid-template-columns: repeat(2, 1fr); }
+  .blog-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+}
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-tel { display: none; }
+  .hamburger { display: flex; }
+
+  .hero { padding-bottom: 50px; }
+  .hero-stars-bar { gap: 1.5rem; padding-top: 90px; }
+  .hero-headline h1 { font-size: clamp(3.5rem, 18vw, 7rem); }
+  .hero-btns { flex-direction: column; align-items: center; }
+  .btn-main, .btn-ghost { width: 100%; justify-content: center; max-width: 320px; }
+
+  .sec { padding: 70px 5%; }
+  .servicios-grid { grid-template-columns: 1fr; }
+  .stats-inner { grid-template-columns: repeat(2, 1fr); }
+  .proceso-steps { grid-template-columns: 1fr; }
+  .resenas-grid { grid-template-columns: 1fr; }
+  .blog-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+
+  .resenas-header { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 480px) {
+  .stats-inner { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .hero-headline h1 { font-size: clamp(3rem, 20vw, 5rem); }
+  .cta-sec .sec-h { font-size: clamp(3rem, 13vw, 6rem); }
+}
+</style>
+
+<!-- Schema SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "url": "https://www.marketingconseo.com",
+      "name": "SEO y Google",
+      "description": "Agencia especializada en posicionamiento SEO y reputación digital en México",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.marketingconseo.com/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "SEO y Google",
+      "url": "https://www.marketingconseo.com",
+      "description": "Agencia de SEO, reputación digital y posicionamiento web en México.",
+      "priceRange": "$$",
+      "addressCountry": "MX",
+      "areaServed": "México",
+      "serviceType": ["SEO", "Reputación Digital", "Linkbuilding", "Marketing de Contenidos"],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "52"
+      }
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" id="menuClose">✕</button>
+  <a href="#servicios" onclick="closeMenu()">Servicios</a>
+  <a href="#proceso" onclick="closeMenu()">Proceso</a>
+  <a href="#resenas" onclick="closeMenu()">Clientes</a>
+  <a href="#blog" onclick="closeMenu()">Blog</a>
+  <a href="#contacto" onclick="closeMenu()" style="color:var(--amarillo)">Contactar</a>
+</div>
+
+<!-- NAVBAR -->
+<nav>
+  
+  <div class="logo">SEO<span>y</span><span>Google</span></div>
+  <ul class="nav-links">
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#proceso">Proceso</a></li>
+    <li><a href="#resenas">Clientes</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#contacto" class="nav-cta">Contactar</a></li>
+  </ul>
+  <button class="hamburger" id="menuOpen" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero" role="banner">
+  <div class="hero-bg"></div>
+  <div class="hero-deco">SEO</div>
+
+  <div class="hero-stars-bar">
+    <div class="star-item">
+      <div class="stars">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <div class="star-quote">"Triplicamos nuestro tráfico orgánico"</div>
+    </div>
+    <div class="star-item">
+      <div class="stars">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <div class="star-quote">"Top 1 en Google en menos de 90 días"</div>
+    </div>
+    <div class="star-item">
+      <div class="stars">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <div class="star-quote">"250% más de leads desde Google"</div>
+    </div>
+  </div>
+
+  <div class="hero-headline">
+    <h1>
+      <span class="outline">Aparece</span><br>
+      PRIMERO<br>
+      <span class="yellow">en Google.</span>
+    </h1>
+  </div>
+
+  <div class="hero-sub">
+    <p>Estrategias de SEO y reputación digital que llevan tu negocio a los primeros resultados — y lo mantienen ahí. Sin trucos, con resultados reales.</p>
+  </div>
+
+  <div class="hero-btns">
+    <a href="https://wa.me/525551031461?text=Hola,%20quiero%20información%20sobre%20SEO%20y%20reputación%20digital" class="btn-main" target="_blank">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Hablar con un experto
+    </a>
+    <a href="#servicios" class="btn-ghost">Ver servicios →</a>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap" aria-hidden="true">
+  <div class="ticker-inner">
+    <span>SEO Técnico</span><span>Reputación Digital</span><span>Linkbuilding</span>
+    <span>Contenido SEO</span><span>SEO Local</span><span>Google Business</span>
+    <span>Auditoría SEO</span><span>Posicionamiento Web</span><span>Top 1 en Google</span>
+    <span>SEO Técnico</span><span>Reputación Digital</span><span>Linkbuilding</span>
+    <span>Contenido SEO</span><span>SEO Local</span><span>Google Business</span>
+    <span>Auditoría SEO</span><span>Posicionamiento Web</span><span>Top 1 en Google</span>
+  </div>
+</div>
+
+<!-- SERVICIOS -->
+<section class="sec" id="servicios">
+  <div class="sec-inner">
+    <div class="sec-tag">Servicios</div>
+    <h2 class="sec-h">Lo que<br><em>hacemos</em></h2>
+    <p class="sec-p">Todo lo que necesitas para dominar Google y construir una reputación digital sólida que convierta.</p>
+    <div class="servicios-grid">
+      <div class="s-card reveal reveal-d1">
+        <div class="s-num">01</div>
+        <h3>SEO Técnico y On-Page</h3>
+        <p>Optimización completa: velocidad, estructura, metadatos, datos estructurados. Todo lo que Google necesita para posicionarte arriba.</p>
+      </div>
+      <div class="s-card reveal reveal-d2">
+        <div class="s-num">02</div>
+        <h3>Reputación Digital</h3>
+        <p>Más reseñas positivas, control de menciones y construcción de una imagen online que genera confianza y convierte.</p>
+      </div>
+      <div class="s-card reveal reveal-d3">
+        <div class="s-num">03</div>
+        <h3>Linkbuilding de Autoridad</h3>
+        <p>Enlaces desde medios con alta autoridad de dominio para escalar posiciones de forma sostenible y sin penalizaciones.</p>
+      </div>
+      <div class="s-card reveal reveal-d1">
+        <div class="s-num">04</div>
+        <h3>Contenido SEO</h3>
+        <p>Artículos y landing pages optimizadas que capturan tráfico orgánico cualificado y posicionan tu marca como referente.</p>
+      </div>
+      <div class="s-card reveal reveal-d2">
+        <div class="s-num">05</div>
+        <h3>SEO Local y Google Business</h3>
+        <p>Dominamos las búsquedas locales y Google Maps para que los clientes de tu ciudad te encuentren a ti primero.</p>
+      </div>
+      <div class="s-card reveal reveal-d3">
+        <div class="s-num">06</div>
+        <h3>Auditoría y Consultoría SEO</h3>
+        <p>Análisis profundo de tu sitio y competencia con un plan de acción claro para alcanzar los primeros resultados.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-sec">
+  <div class="stats-inner">
+    <div class="stat-card reveal">
+      <span class="stat-num">+300%</span>
+      <span class="stat-label">Tráfico orgánico promedio</span>
+    </div>
+    <div class="stat-card reveal reveal-d1">
+      <span class="stat-num">90</span>
+      <span class="stat-label">Días al Top 3 de Google</span>
+    </div>
+    <div class="stat-card reveal reveal-d2">
+      <span class="stat-num">500+</span>
+      <span class="stat-label">Negocios posicionados</span>
+    </div>
+    <div class="stat-card reveal reveal-d3">
+      <span class="stat-num">★4.9</span>
+      <span class="stat-label">Calificación de clientes</span>
+    </div>
+  </div>
+</div>
+
+<!-- PROCESO -->
+<section class="sec proceso-sec" id="proceso">
+  <div class="sec-inner">
+    <div class="sec-tag">Metodología</div>
+    <h2 class="sec-h">Cómo llegamos<br>al <em>Top 1</em></h2>
+    <p class="sec-p">Un proceso transparente y probado en cientos de negocios en México.</p>
+    <div class="proceso-steps reveal">
+      <div class="paso">
+        <div class="paso-num-big">01</div>
+        <div class="paso-content">
+          <h3>Auditoría Profunda</h3>
+          <p>Analizamos tu sitio, sector y competencia para identificar exactamente qué necesitas para escalar posiciones.</p>
+        </div>
+      </div>
+      <div class="paso">
+        <div class="paso-num-big">02</div>
+        <div class="paso-content">
+          <h3>Estrategia Personalizada</h3>
+          <p>Diseñamos un plan específico para tu industria y objetivos. Sin recetas genéricas. Sin promesas vacías.</p>
+        </div>
+      </div>
+      <div class="paso">
+        <div class="paso-num-big">03</div>
+        <div class="paso-content">
+          <h3>Ejecución y Optimización</h3>
+          <p>SEO técnico, contenido, linkbuilding y reputación implementados de forma sistemática y medible cada semana.</p>
+        </div>
+      </div>
+      <div class="paso">
+        <div class="paso-num-big">04</div>
+        <div class="paso-content">
+          <h3>Reportes y Resultados</h3>
+          <p>Dashboard mensual con métricas claras: posiciones, tráfico, leads y retorno de inversión real.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEÑAS -->
+<section class="sec resenas-sec" id="resenas">
+  <div class="sec-inner">
+    <div class="resenas-header">
+      <div>
+        <div class="sec-tag">Testimonios</div>
+        <h2 class="sec-h" style="margin-bottom:0">Resultados<br>que <em>hablan</em></h2>
+      </div>
+      <a href="#contacto" class="btn-main" style="align-self:flex-end">Ver todos →</a>
+    </div>
+    <div class="resenas-grid">
+      <div class="r-card reveal reveal-d1">
+        <div class="r-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="r-text">"El mejor sistema que he utilizado. En menos de 3 meses mi clínica apareció en el top 3 de Google para las búsquedas más importantes. Los resultados hablan solos."</p>
+        <div class="r-author">
+          <div class="r-avatar">MS</div>
+          <div>
+            <div class="r-name">María S.</div>
+            <div class="r-biz">Clínica Dental · Ciudad de México</div>
+          </div>
+        </div>
+      </div>
+      <div class="r-card reveal reveal-d2">
+        <div class="r-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="r-text">"Sentía que mi negocio se hundía frente a la competencia. Gracias a su estrategia de SEO ahora recibo el doble de consultas por mes. Totalmente recomendado."</p>
+        <div class="r-author">
+          <div class="r-avatar">RC</div>
+          <div>
+            <div class="r-name">Roberto C.</div>
+            <div class="r-biz">Despacho Legal · Monterrey</div>
+          </div>
+        </div>
+      </div>
+      <div class="r-card reveal reveal-d3">
+        <div class="r-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="r-text">"El trabajo de reputación digital fue clave. Ahora recibo más pacientes porque la gente confía en nosotros antes de llamar. Mejor inversión que hice para mi negocio."</p>
+        <div class="r-author">
+          <div class="r-avatar">AL</div>
+          <div>
+            <div class="r-name">Ana L.</div>
+            <div class="r-biz">Centro de Salud · Guadalajara</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="sec blog-sec" id="blog">
+  <div class="sec-inner">
+    <div class="sec-tag">Blog SEO</div>
+    <h2 class="sec-h">Aprende a<br><em>dominar</em> Google</h2>
+    <p class="sec-p">Contenido práctico para entender cómo funciona Google y crecer tu negocio online.</p>
+    <div class="blog-grid">
+      <div class="b-card big reveal">
+        <div class="b-img" style="background:linear-gradient(135deg,#0f0f0f,#1a1200)">
+          🔍<div class="b-img-overlay"></div>
+          <span class="b-cat">SEO</span>
+        </div>
+        <div class="b-body">
+          <div class="b-date">10 Mar 2026</div>
+          <h3>Cómo aparecer en el Top 3 de Google en 90 días: Guía completa para negocios en México</h3>
+          <p>Las estrategias que realmente funcionan en 2026 para negocios locales, con pasos accionables y sin tecnicismos.</p>
+          <a href="#" class="b-link">Leer artículo →</a>
+        </div>
+      </div>
+      <div class="b-card reveal reveal-d1">
+        <div class="b-img" style="background:linear-gradient(135deg,#0f0f0f,#0f1a00)">
+          ⭐<div class="b-img-overlay"></div>
+          <span class="b-cat">Reputación</span>
+        </div>
+        <div class="b-body">
+          <div class="b-date">5 Mar 2026</div>
+          <h3>Las Reseñas de Google: Tu Activo Digital Más Valioso</h3>
+          <p>Por qué la reputación online impacta directamente en tus ventas.</p>
+          <a href="#" class="b-link">Leer →</a>
+        </div>
+      </div>
+      <div class="b-card reveal reveal-d2">
+        <div class="b-img" style="background:linear-gradient(135deg,#0f0f0f,#1a0a00)">
+          🔗<div class="b-img-overlay"></div>
+          <span class="b-cat">Linkbuilding</span>
+        </div>
+        <div class="b-body">
+          <div class="b-date">28 Feb 2026</div>
+          <h3>Linkbuilding 2026: Qué Funciona y Qué Puede Penalizarte</h3>
+          <p>Guía actualizada para construir autoridad sin riesgo.</p>
+          <a href="#" class="b-link">Leer →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-sec" id="contacto">
+  <div class="sec-tag">¿Listo para crecer?</div>
+  <h2 class="sec-h">Primera<br>consulta<br><em>gratis.</em></h2>
+  <p class="sec-p">Cuéntanos sobre tu negocio y te decimos exactamente cómo llevarte al top de Google.</p>
+  <div class="cta-btns">
+    <a href="https://wa.me/525551031461?text=Hola,%20quiero%20una%20consulta%20gratuita%20de%20SEO%20y%20reputación%20digital" class="btn-wa" target="_blank">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Escribir por WhatsApp
+    </a>
+    <a href="mailto:siglernats@gmail.com" class="btn-ghost">Enviar email</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <span class="f-logo">Marketing<span>conSEO</span></span>
+      <p>Agencia especializada en SEO, reputación digital y posicionamiento web en México. Resultados medibles desde el primer mes.</p>
+    </div>
+    <div>
+      <h4>Servicios</h4>
+      <ul>
+        <li><a href="#">SEO Técnico</a></li>
+        <li><a href="#">Reputación Digital</a></li>
+        <li><a href="#">Linkbuilding</a></li>
+        <li><a href="#">Contenido SEO</a></li>
+        <li><a href="#">SEO Local</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Recursos</h4>
+      <ul>
+        <li><a href="#blog">Blog SEO</a></li>
+        <li><a href="#">Auditoría Gratis</a></li>
+        <li><a href="#">Casos de Éxito</a></li>
+        <li><a href="#">Guías Gratuitas</a></li>
+        <a href="aviso-de-privacidad.html">Aviso de Privacidad</a>
+      </ul>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <ul>
+        <li><a href="https://wa.me/525551031461" target="_blank">WhatsApp</a></li>
+        <li><a href="mailto:hola@marketingconseo.com">Email</a></li>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 SEO y Google · Todos los derechos reservados</span>
+    <span>Posicionando negocios en México</span>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOTANTE -->
+<a href="https://wa.me/525551031461?text=Hola,%20quiero%20información%20sobre%20SEO%20y%20reputación%20digital" 
+   class="wa-float" target="_blank" aria-label="Contactar por WhatsApp">
+  <span class="wa-tip">¡Escríbenos ahora!</span>
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+// Mobile menu
+const menuOpen = document.getElementById('menuOpen');
+const menuClose = document.getElementById('menuClose');
+const mobileMenu = document.getElementById('mobileMenu');
+
+menuOpen.addEventListener('click', () => {
+  mobileMenu.style.display = 'flex';
+  requestAnimationFrame(() => mobileMenu.classList.add('open'));
+});
+
+function closeMenu() {
+  mobileMenu.classList.remove('open');
+  setTimeout(() => mobileMenu.style.display = 'none', 300);
+}
+menuClose.addEventListener('click', closeMenu);
+
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+reveals.forEach(el => observer.observe(el));
+
+// Contador animado para stats
+function animateCounters() {
+  document.querySelectorAll('.stat-num').forEach(el => {
+    const text = el.textContent;
+    const num = parseFloat(text.replace(/[^0-9.]/g, ''));
+    if (isNaN(num) || num === 0) return;
+    const prefix = text.match(/^[^0-9]*/)[0];
+    const suffix = text.match(/[^0-9.]*$/)[0];
+    let start = 0;
+    const duration = 1800;
+    const startTime = performance.now();
+    function update(now) {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = Math.round(eased * num);
+      el.textContent = prefix + current + suffix;
+      if (progress < 1) requestAnimationFrame(update);
+    }
+    requestAnimationFrame(update);
+  });
+}
+
+const statsSection = document.querySelector('.stats-sec');
+const statsObserver = new IntersectionObserver(entries => {
+  if (entries[0].isIntersecting) {
+    animateCounters();
+    statsObserver.disconnect();
+  }
+}, { threshold: 0.3 });
+statsObserver.observe(statsSection);
+</script>
+
+</body>
+</html>

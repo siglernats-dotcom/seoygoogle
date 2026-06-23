@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aviso de Privacidad | SEO y Google</title>
+<meta name="description" content="Aviso de Privacidad de SEO y Google. Conoce cómo tratamos y protegemos tus datos personales conforme a la LFPDPPP de México.">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="favicon.png">
+<style>
+:root {
+  --negro: #0a0a0a;
+  --negro2: #111111;
+  --negro3: #1a1a1a;
+  --amarillo: #F5D000;
+  --amarillo2: #FFE44D;
+  --blanco: #ffffff;
+}
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  font-family: 'Barlow', sans-serif;
+  background: var(--negro);
+  color: var(--blanco);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── NAVBAR ── */
+.mcs-nav {
+  position:fixed; top:0; width:100%; z-index:1000;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:0 5%; height:68px;
+  background:rgba(10,10,10,0.97);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(245,208,0,0.15);
+}
+.mcs-logo {
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:900; font-size:1.35rem;
+  letter-spacing:0.04em; text-transform:uppercase;
+  color:var(--blanco); text-decoration:none;
+}
+.mcs-logo span { color:var(--amarillo); }
+.mcs-nav-links { display:flex; gap:2rem; list-style:none; }
+.mcs-nav-links a {
+  color:rgba(255,255,255,0.55); text-decoration:none;
+  font-size:0.82rem; font-weight:500;
+  letter-spacing:0.06em; text-transform:uppercase; transition:color 0.2s;
+}
+.mcs-nav-links a:hover { color:var(--amarillo); }
+.mcs-nav-cta {
+  background:var(--amarillo) !important; color:var(--negro) !important;
+  padding:0.5rem 1.4rem !important; font-weight:700 !important; border-radius:3px;
+}
+.mcs-hamburger {
+  display:none; flex-direction:column; gap:5px;
+  cursor:pointer; padding:5px; background:none; border:none;
+}
+.mcs-hamburger span { display:block; width:24px; height:2px; background:var(--blanco); border-radius:2px; }
+.mcs-mobile-menu {
+  display:none; position:fixed; inset:0;
+  background:var(--negro); z-index:999;
+  flex-direction:column; justify-content:center;
+  align-items:center; gap:2.5rem; opacity:0; transition:opacity 0.3s;
+}
+.mcs-mobile-menu.open { opacity:1; }
+.mcs-mobile-menu a {
+  font-family:'Barlow Condensed',sans-serif; font-weight:900;
+  font-size:3rem; text-transform:uppercase;
+  color:var(--blanco); text-decoration:none; transition:color 0.2s;
+}
+.mcs-mobile-menu a:hover { color:var(--amarillo); }
+.mcs-menu-close {
+  position:absolute; top:24px; right:5%;
+  background:none; border:none; color:var(--blanco); font-size:2rem; cursor:pointer;
+}
+
+/* ── HERO DE PÁGINA ── */
+.priv-hero {
+  padding: 140px 5% 80px;
+  background: var(--negro2);
+  border-bottom: 1px solid rgba(245,208,0,0.12);
+  position: relative;
+  overflow: hidden;
+}
+.priv-hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 60% 80% at 0% 50%, rgba(245,208,0,0.05), transparent 65%);
+}
+.priv-hero-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+.priv-tag {
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:0.72rem; font-weight:800;
+  letter-spacing:0.25em; text-transform:uppercase;
+  color:var(--amarillo); margin-bottom:1rem;
+  display:flex; align-items:center; gap:0.6rem;
+}
+.priv-tag::before { content:''; display:block; width:28px; height:2px; background:var(--amarillo); }
+.priv-hero h1 {
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:900; font-size:clamp(3rem,7vw,6rem);
+  line-height:0.95; letter-spacing:-0.02em;
+  text-transform:uppercase; color:var(--blanco);
+  margin-bottom:1.5rem;
+}
+.priv-hero h1 em { color:var(--amarillo); font-style:italic; }
+.priv-hero p {
+  font-size:1rem; color:rgba(255,255,255,0.5);
+  line-height:1.7; max-width:600px; font-weight:300;
+}
+.priv-fecha {
+  margin-top:1.5rem;
+  display:inline-flex; align-items:center; gap:0.6rem;
+  background:rgba(245,208,0,0.08);
+  border:1px solid rgba(245,208,0,0.2);
+  padding:0.4rem 1rem; border-radius:2px;
+  font-size:0.78rem; color:var(--amarillo);
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700; letter-spacing:0.08em; text-transform:uppercase;
+}
+
+/* ── CONTENIDO ── */
+.priv-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 5%;
+}
+
+.priv-section {
+  margin-bottom: 3.5rem;
+  padding-bottom: 3.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.priv-section:last-child { border-bottom: none; }
+
+.priv-section-num {
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:900; font-size:0.72rem;
+  letter-spacing:0.2em; text-transform:uppercase;
+  color:var(--amarillo); margin-bottom:0.6rem;
+  display:flex; align-items:center; gap:0.5rem;
+}
+.priv-section-num::before { content:''; display:block; width:20px; height:2px; background:var(--amarillo); }
+
+.priv-section h2 {
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:800; font-size:clamp(1.4rem,3vw,2rem);
+  text-transform:uppercase; letter-spacing:0.02em;
+  color:var(--blanco); margin-bottom:1.2rem;
+}
+
+.priv-section p {
+  font-size:0.95rem; line-height:1.85;
+  color:rgba(255,255,255,0.6); font-weight:300;
+  margin-bottom:1rem;
+}
+.priv-section p:last-child { margin-bottom:0; }
+
+.priv-section strong { color:rgba(255,255,255,0.85); font-weight:600; }
+
+.priv-list {
+  list-style:none; margin:1rem 0;
+}
+.priv-list li {
+  font-size:0.95rem; color:rgba(255,255,255,0.6);
+  line-height:1.7; padding:0.6rem 0;
+  display:flex; gap:1rem; align-items:flex-start;
+  border-bottom:1px solid rgba(255,255,255,0.04);
+  font-weight:300;
+}
+.priv-list li:last-child { border-bottom:none; }
+.priv-list li::before {
+  content:'→';
+  color:var(--amarillo); flex-shrink:0;
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:800; font-size:0.9rem; margin-top:2px;
+}
+
+.priv-highlight {
+  background:rgba(245,208,0,0.06);
+  border:1px solid rgba(245,208,0,0.2);
+  border-left:3px solid var(--amarillo);
+  border-radius:3px;
+  padding:1.5rem 1.8rem;
+  margin:1.5rem 0;
+}
+.priv-highlight p {
+  color:rgba(255,255,255,0.7) !important;
+  font-size:0.9rem !important;
+  margin:0 !important;
+}
+
+.priv-contact-box {
+  background:var(--negro2);
+  border:1px solid rgba(245,208,0,0.2);
+  border-radius:4px;
+  padding:2.5rem;
+  margin-top:1.5rem;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1.5rem;
+}
+.priv-contact-item { display:flex; flex-direction:column; gap:0.3rem; }
+.priv-contact-label {
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:0.68rem; letter-spacing:0.2em;
+  text-transform:uppercase; color:var(--amarillo); font-weight:800;
+}
+.priv-contact-val {
+  font-size:0.9rem; color:rgba(255,255,255,0.7);
+}
+.priv-contact-val a { color:var(--amarillo); text-decoration:none; }
+.priv-contact-val a:hover { text-decoration:underline; }
+
+/* ── CTA BOTTOM ── */
+.priv-cta {
+  background:var(--negro2);
+  border-top:1px solid rgba(245,208,0,0.1);
+  padding:60px 5%;
+  text-align:center;
+}
+.priv-cta h3 {
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:900; font-size:clamp(1.8rem,4vw,3rem);
+  text-transform:uppercase; margin-bottom:0.8rem;
+}
+.priv-cta p { font-size:0.95rem; color:rgba(255,255,255,0.5); margin-bottom:2rem; font-weight:300; }
+.mcs-btn-main {
+  background:var(--amarillo); color:var(--negro);
+  padding:0.9rem 2.2rem;
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:800; font-size:0.95rem;
+  letter-spacing:0.1em; text-transform:uppercase;
+  text-decoration:none; border-radius:3px;
+  display:inline-flex; align-items:center; gap:0.6rem;
+  transition:all 0.2s;
+}
+.mcs-btn-main:hover { background:var(--amarillo2); transform:translateY(-2px); }
+.mcs-btn-ghost {
+  border:2px solid rgba(255,255,255,0.2); color:rgba(255,255,255,0.6);
+  padding:0.9rem 2rem;
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700; font-size:0.95rem;
+  letter-spacing:0.1em; text-transform:uppercase;
+  text-decoration:none; border-radius:3px; transition:all 0.2s;
+  margin-left:1rem;
+}
+.mcs-btn-ghost:hover { border-color:var(--amarillo); color:var(--amarillo); }
+
+/* ── FOOTER ── */
+.mcs-footer {
+  background:var(--negro2); padding:50px 5% 30px;
+  border-top:1px solid rgba(255,255,255,0.05);
+}
+.mcs-footer-bottom {
+  max-width:1180px; margin:0 auto;
+  display:flex; justify-content:space-between;
+  font-size:0.78rem; color:rgba(255,255,255,0.2);
+  flex-wrap:wrap; gap:0.5rem; padding-top:1.5rem;
+  border-top:1px solid rgba(255,255,255,0.05);
+}
+.mcs-footer-bottom a { color:rgba(255,255,255,0.3); text-decoration:none; transition:color 0.2s; }
+.mcs-footer-bottom a:hover { color:var(--amarillo); }
+
+/* ── WA FLOAT ── */
+.mcs-wa-float {
+  position:fixed; bottom:28px; right:28px; z-index:9998;
+  width:58px; height:58px; background:#25D366; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  text-decoration:none; transition:all 0.3s;
+  animation:waPulse 2.5s ease-in-out infinite;
+}
+.mcs-wa-float:hover { transform:scale(1.12); }
+.mcs-wa-float svg { width:30px; height:30px; fill:white; }
+.mcs-wa-tip {
+  position:absolute; right:68px; background:var(--negro);
+  color:rgba(255,255,255,0.8); padding:0.5rem 1rem;
+  border-radius:3px; font-size:0.8rem; white-space:nowrap;
+  opacity:0; pointer-events:none; transition:opacity 0.2s;
+  border:1px solid rgba(255,255,255,0.08);
+}
+.mcs-wa-float:hover .mcs-wa-tip { opacity:1; }
+
+@keyframes waPulse {
+  0%,100%{box-shadow:0 4px 20px rgba(37,211,102,0.45)}
+  50%{box-shadow:0 4px 30px rgba(37,211,102,0.7),0 0 0 10px rgba(37,211,102,0.08)}
+}
+
+/* ── RESPONSIVE ── */
+@media(max-width:768px){
+  .mcs-nav-links { display:none; }
+  .mcs-hamburger { display:flex; }
+  .priv-contact-box { grid-template-columns:1fr; }
+  .mcs-btn-ghost { margin-left:0; margin-top:0.8rem; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- MENÚ MÓVIL -->
+<div class="mcs-mobile-menu" id="mcsMobileMenu">
+  <button class="mcs-menu-close" id="mcsMenuClose">✕</button>
+  <a href="/" onclick="mcsCloseMenu()">Inicio</a>
+  <a href="/#servicios" onclick="mcsCloseMenu()">Servicios</a>
+  <a href="/#contacto" onclick="mcsCloseMenu()" style="color:var(--amarillo)">Contactar</a>
+</div>
+
+<!-- NAVBAR -->
+<nav class="mcs-nav">
+  <a href="marketingconseo-v3.html" class="mcs-logo">SEO<span>yGoogle</span></a>
+  <ul class="mcs-nav-links">
+    <li><a href="/#servicios">Servicios</a></li>
+    <li><a href="/#proceso">Proceso</a></li>
+    <li><a href="/#resenas">Clientes</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/#contacto" class="mcs-nav-cta">Contactar</a></li>
+  </ul>
+  <button class="mcs-hamburger" id="mcsMenuOpen" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<div class="priv-hero">
+  <div class="priv-hero-inner">
+    <div class="priv-tag">Legal</div>
+    <h1>Aviso de<br><em>Privacidad</em></h1>
+    <p>En SEO y Google nos comprometemos a proteger y respetar tu privacidad. Aquí encontrarás de forma clara y completa cómo tratamos tus datos personales.</p>
+    <span class="priv-fecha">📅 Última actualización: 23 de junio de 2026</span>
+  </div>
+</div>
+
+<!-- CONTENIDO DEL AVISO -->
+<div class="priv-content">
+
+  <!-- 1. IDENTIDAD Y DOMICILIO -->
+  <div class="priv-section">
+    <div class="priv-section-num">01</div>
+    <h2>Identidad y Domicilio del Responsable</h2>
+    <p>
+      <strong>SEO y Google</strong>, en adelante "el Responsable", con presencia en internet a través del sitio web 
+      <strong>www.marketingconseo.com</strong>, con domicilio en los Estados Unidos Mexicanos, es el responsable del uso 
+      y protección de sus datos personales, y al respecto le informamos lo siguiente:
+    </p>
+    <div class="priv-highlight">
+      <p>Este Aviso de Privacidad se emite en cumplimiento de lo establecido en la <strong>Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP)</strong> y su Reglamento, así como en los Lineamientos del Aviso de Privacidad publicados por el INAI (Instituto Nacional de Transparencia, Acceso a la Información y Protección de Datos Personales).</p>
+    </div>
+  </div>
+
+  <!-- 2. DATOS QUE RECABAMOS -->
+  <div class="priv-section">
+    <div class="priv-section-num">02</div>
+    <h2>¿Qué Datos Personales Recabamos?</h2>
+    <p>Para llevar a cabo las finalidades descritas en el presente aviso de privacidad, utilizaremos los siguientes datos personales:</p>
+    <ul class="priv-list">
+      <li><strong>Datos de identificación:</strong> nombre completo, nombre de empresa o negocio.</li>
+      <li><strong>Datos de contacto:</strong> número de teléfono celular (WhatsApp), correo electrónico.</li>
+      <li><strong>Datos de negocio:</strong> giro o industria de su empresa, sitio web (si aplica), ubicación geográfica general (ciudad o estado).</li>
+      <li><strong>Datos de navegación:</strong> dirección IP, tipo de navegador, páginas visitadas dentro de nuestro sitio, tiempo de visita y fuente de referencia (obtenidos mediante cookies y herramientas de análisis como Google Analytics).</li>
+    </ul>
+    <p>
+      <strong>No recabamos datos personales sensibles</strong> como origen racial o étnico, estado de salud, información genética, 
+      creencias religiosas, filosóficas o morales, afiliación sindical, opiniones políticas ni preferencia sexual.
+    </p>
+  </div>
+
+  <!-- 3. FINALIDADES -->
+  <div class="priv-section">
+    <div class="priv-section-num">03</div>
+    <h2>¿Para Qué Usamos Sus Datos?</h2>
+    <p>Sus datos personales serán utilizados para las siguientes <strong>finalidades primarias</strong>, que son necesarias para la relación que usted establece con nosotros:</p>
+    <ul class="priv-list">
+      <li>Atender y dar respuesta a sus solicitudes de información sobre nuestros servicios de SEO, reputación digital y marketing de contenidos.</li>
+      <li>Contactarle para agendar consultas, reuniones o llamadas de diagnóstico gratuitas.</li>
+      <li>Elaborar propuestas comerciales y presupuestos personalizados.</li>
+      <li>Prestar los servicios contratados y dar seguimiento a los proyectos activos.</li>
+      <li>Enviar reportes, métricas y actualizaciones relacionadas con el servicio contratado.</li>
+      <li>Emitir facturas, comprobantes fiscales y gestionar cobros cuando aplique.</li>
+    </ul>
+    <p>Adicionalmente, y de forma <strong>secundaria</strong>, sus datos podrán ser utilizados para:</p>
+    <ul class="priv-list">
+      <li>Enviarle contenido educativo, artículos de blog y guías relacionadas con SEO y marketing digital.</li>
+      <li>Informarle sobre nuevos servicios, promociones o actualizaciones de nuestro portafolio.</li>
+      <li>Realizar encuestas de satisfacción y mejora del servicio.</li>
+    </ul>
+    <div class="priv-highlight">
+      <p>Si usted no desea que sus datos sean tratados para las finalidades secundarias, puede manifestarlo en cualquier momento enviando un correo a <strong>contacto@marketingconseo.com</strong> con el asunto "Oposición a finalidades secundarias". Esto no afectará la prestación del servicio principal.</p>
+    </div>
+  </div>
+
+  <!-- 4. TRANSFERENCIA -->
+  <div class="priv-section">
+    <div class="priv-section-num">04</div>
+    <h2>Transferencia de Datos a Terceros</h2>
+    <p>
+      SEO y Google <strong>no vende, cede ni transfiere sus datos personales a terceros</strong> con fines comerciales propios 
+      sin su consentimiento previo, salvo en los siguientes casos permitidos por la Ley:
+    </p>
+    <ul class="priv-list">
+      <li>Cuando la transferencia esté prevista en una Ley o Tratado al que México esté sujeto.</li>
+      <li>Cuando sea necesaria para la prevención o diagnóstico médico, la prestación de asistencia sanitaria o la gestión de servicios sanitarios (no aplica habitualmente a nuestros servicios).</li>
+      <li>Cuando la transferencia sea efectuada a sociedades controladoras, subsidiarias o afiliadas bajo el control común del Responsable, o a una sociedad matriz o a cualquier sociedad del mismo grupo del Responsable que opere bajo los mismos procesos y políticas internas.</li>
+      <li>Cuando sea necesaria en virtud de un contrato celebrado o por celebrar en interés del titular, por el Responsable y un tercero.</li>
+      <li>Cuando sea necesaria para el mantenimiento o cumplimiento de una relación jurídica entre el Responsable y el titular.</li>
+    </ul>
+    <p>
+      Para operar nuestros servicios podemos utilizar herramientas de terceros como <strong>Google Analytics, Google Search Console, 
+      Meta Business Suite, Ahrefs, SEMrush</strong> u otras plataformas de SEO y analítica. Estas plataformas tienen sus propias 
+      políticas de privacidad y únicamente acceden a datos agregados o de navegación, no a sus datos de identificación personal.
+    </p>
+  </div>
+
+  <!-- 5. DERECHOS ARCO -->
+  <div class="priv-section">
+    <div class="priv-section-num">05</div>
+    <h2>Sus Derechos ARCO</h2>
+    <p>
+      Usted tiene derecho a <strong>Acceder, Rectificar, Cancelar u Oponerse</strong> (derechos ARCO) al tratamiento de sus datos personales. 
+      Para ejercer cualquiera de estos derechos, envíe su solicitud a través de los medios indicados al final de este aviso, incluyendo:
+    </p>
+    <ul class="priv-list">
+      <li><strong>Acceso:</strong> conocer qué datos personales tenemos de usted, para qué los usamos y las condiciones del uso que les damos.</li>
+      <li><strong>Rectificación:</strong> solicitar la corrección de su información personal en caso de que esté desactualizada, sea inexacta o incompleta.</li>
+      <li><strong>Cancelación:</strong> solicitar que eliminemos sus datos de nuestros registros o bases de datos cuando considere que no están siendo utilizados conforme a los principios, deberes y obligaciones previstas en la Ley.</li>
+      <li><strong>Oposición:</strong> oponerse al uso de sus datos personales para fines específicos, en particular para las finalidades secundarias descritas en este aviso.</li>
+    </ul>
+    <p>
+      Daremos respuesta a su solicitud en un plazo máximo de <strong>20 días hábiles</strong> contados a partir de la fecha en que la recibamos. 
+      Si su solicitud resulta procedente, haremos efectiva la misma dentro de los 15 días hábiles siguientes a la fecha en que le comuniquemos la respuesta.
+    </p>
+  </div>
+
+  <!-- 6. COOKIES -->
+  <div class="priv-section">
+    <div class="priv-section-num">06</div>
+    <h2>Uso de Cookies y Tecnologías de Rastreo</h2>
+    <p>
+      Nuestro sitio web utiliza <strong>cookies</strong> y otras tecnologías de seguimiento para mejorar su experiencia de navegación, 
+      analizar el uso del sitio y optimizar nuestro contenido. Entre las cookies que utilizamos se encuentran:
+    </p>
+    <ul class="priv-list">
+      <li><strong>Cookies estrictamente necesarias:</strong> requeridas para el funcionamiento básico del sitio (sesión, seguridad).</li>
+      <li><strong>Cookies de análisis:</strong> Google Analytics para medir el número de visitantes, páginas más visitadas, tiempo de permanencia y fuente de tráfico.</li>
+      <li><strong>Cookies de funcionalidad:</strong> para recordar sus preferencias de navegación.</li>
+      <li><strong>Cookies de marketing:</strong> para personalizar anuncios en plataformas como Google Ads o Meta (Facebook/Instagram) en caso de usar remarketing.</li>
+    </ul>
+    <p>
+      Usted puede deshabilitar las cookies en cualquier momento a través de la configuración de su navegador. 
+      Sin embargo, tenga en cuenta que deshabilitar ciertas cookies puede afectar la funcionalidad del sitio.
+    </p>
+  </div>
+
+  <!-- 7. SEGURIDAD -->
+  <div class="priv-section">
+    <div class="priv-section-num">07</div>
+    <h2>Medidas de Seguridad</h2>
+    <p>
+      Para proteger sus datos personales contra daño, pérdida, alteración, destrucción, uso, acceso o tratamiento no autorizado, 
+      hemos implementado las siguientes medidas de seguridad administrativas, técnicas y físicas:
+    </p>
+    <ul class="priv-list">
+      <li>Transmisión de datos cifrada mediante protocolo <strong>HTTPS/SSL</strong> en nuestro sitio web.</li>
+      <li>Acceso restringido a los datos personales únicamente al personal autorizado que los necesite para el desempeño de sus funciones.</li>
+      <li>Uso de contraseñas seguras y autenticación de dos factores en las plataformas donde se almacena información de clientes.</li>
+      <li>Revisión periódica de nuestras prácticas de recopilación, almacenamiento y procesamiento de datos.</li>
+    </ul>
+  </div>
+
+  <!-- 8. MENORES DE EDAD -->
+  <div class="priv-section">
+    <div class="priv-section-num">08</div>
+    <h2>Menores de Edad</h2>
+    <p>
+      Nuestros servicios están dirigidos exclusivamente a personas mayores de 18 años y a representantes legales de personas morales (empresas). 
+      <strong>No recabamos intencionalmente datos personales de menores de edad.</strong> Si usted es padre, madre o tutor y cree que su hijo 
+      nos ha proporcionado datos personales, contáctenos de inmediato para proceder a su eliminación.
+    </p>
+  </div>
+
+  <!-- 9. CAMBIOS AL AVISO -->
+  <div class="priv-section">
+    <div class="priv-section-num">09</div>
+    <h2>Cambios al Aviso de Privacidad</h2>
+    <p>
+      El presente aviso de privacidad puede sufrir modificaciones, cambios o actualizaciones derivadas de nuevos requerimientos legales, 
+      de nuestras propias necesidades por los productos o servicios que ofrecemos, de nuestras prácticas de privacidad o por otras causas.
+    </p>
+    <p>
+      Nos comprometemos a mantener actualizado este aviso y a notificarle sobre cambios significativos a través de un aviso visible en 
+      nuestro sitio web <strong>www.marketingconseo.com</strong> o mediante correo electrónico si tenemos sus datos de contacto registrados.
+    </p>
+    <div class="priv-highlight">
+      <p>La fecha de la última actualización de este Aviso de Privacidad se indica al inicio del documento. Le recomendamos revisarlo periódicamente.</p>
+    </div>
+  </div>
+
+  <!-- 10. CONTACTO -->
+  <div class="priv-section">
+    <div class="priv-section-num">10</div>
+    <h2>Contacto para Ejercer sus Derechos</h2>
+    <p>
+      Para ejercer sus derechos ARCO, revocar su consentimiento, presentar alguna queja o duda relacionada con el tratamiento de sus 
+      datos personales, puede contactarnos a través de los siguientes medios:
+    </p>
+    <div class="priv-contact-box">
+      <div class="priv-contact-item">
+        <span class="priv-contact-label">Correo Electrónico</span>
+        <span class="priv-contact-val">
+          <a href="mailto:siglernats@gmail.com">siglernats@gmail.com</a>
+        </span>
+      </div>
+      <div class="priv-contact-item">
+        <span class="priv-contact-label">WhatsApp</span>
+        <span class="priv-contact-val">
+          <a href="https://wa.me/525551031461?text=Hola%2C%20tengo%20una%20pregunta%20sobre%20el%20aviso%20de%20privacidad" target="_blank" rel="noopener">
+            Enviar mensaje
+          </a>
+        </span>
+      </div>
+      <div class="priv-contact-item">
+        <span class="priv-contact-label">Sitio Web</span>
+        <span class="priv-contact-val">
+          <a href="/">www.marketingconseo.com</a>
+        </span>
+      </div>
+      <div class="priv-contact-item">
+        <span class="priv-contact-label">Horario de Atención</span>
+        <span class="priv-contact-val">Lunes a Viernes, 9:00 a 18:00 hrs (CST)</span>
+      </div>
+    </div>
+    <p style="margin-top:1.5rem;">
+      Si considera que su derecho a la protección de datos personales ha sido vulnerado por alguna conducta u omisión de nuestra parte, 
+      o presume que en el tratamiento de sus datos personales existe alguna violación a las disposiciones previstas en la Ley Federal de 
+      Protección de Datos Personales en Posesión de los Particulares, podrá interponer la queja o denuncia correspondiente ante el 
+      <strong>INAI (Instituto Nacional de Transparencia, Acceso a la Información y Protección de Datos Personales)</strong> en 
+      <a href="https://www.inai.org.mx" target="_blank" rel="noopener" style="color:var(--amarillo);">www.inai.org.mx</a>.
+    </p>
+  </div>
+
+</div><!-- /priv-content -->
+
+<!-- CTA -->
+<div class="priv-cta">
+  <h3>¿Tienes alguna duda?</h3>
+  <p>Estamos aquí para ayudarte. Contáctanos directamente.</p>
+  <a href="https://wa.me/525551031461?text=Hola%2C%20tengo%20una%20pregunta%20sobre%20el%20aviso%20de%20privacidad" class="mcs-btn-main" target="_blank" rel="noopener">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Escribir por WhatsApp
+  </a>
+  <a href="marketingconseo-v3.html" class="mcs-btn-ghost">← Volver al inicio</a>
+</div>
+
+<!-- FOOTER -->
+<footer class="mcs-footer">
+  <div class="mcs-footer-bottom">
+    <span>© 2026 SEO y Google · Todos los derechos reservados</span>
+    <span>
+      <a href="/aviso-de-privacidad/">Aviso de Privacidad</a>
+      &nbsp;·&nbsp;
+      <a href="marketingconseo-v3.html">Inicio</a>
+    </span>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOTANTE -->
+<a href="https://wa.me/525551031461?text=Hola%2C%20tengo%20una%20pregunta%20sobre%20el%20aviso%20de%20privacidad" class="mcs-wa-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  <span class="mcs-wa-tip">¡Escríbenos!</span>
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+const mcsOpen = document.getElementById('mcsMenuOpen');
+const mcsClose = document.getElementById('mcsMenuClose');
+const mcsMobile = document.getElementById('mcsMobileMenu');
+mcsOpen.addEventListener('click',()=>{ mcsMobile.style.display='flex'; requestAnimationFrame(()=>mcsMobile.classList.add('open')); });
+function mcsCloseMenu(){ mcsMobile.classList.remove('open'); setTimeout(()=>mcsMobile.style.display='none',300); }
+mcsClose.addEventListener('click',mcsCloseMenu);
+</script>
+
+</body>
+</html>
